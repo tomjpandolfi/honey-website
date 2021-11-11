@@ -1,0 +1,27 @@
+.liquidity-problem-card{
+    background-color: #F2C899;
+    border-radius: 10px;
+    padding: 25px;
+    h3{
+        font-weight: 700;
+        font-size: 30px;
+        margin: 0;
+    }
+    p{
+        // font-weight: 600;
+        font-size: 16.5px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .liquidity-problem-card{
+        h3{
+            font-size: 24px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.how-it-works-section{
+    .container{
+        padding: 0 4%;
+        h2{
+           font-size: 48px; 
+           margin: 0;
+           margin-bottom: 30px;
+        }
+        .details{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            .paragraphs{
+                width: 47%;
+                p{
+                    line-height: 38px;
+                    font-size: 20px;
+                }
+
+            }
+            .image-container{
+                width: 47%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .how-it-works-section{
+        .container{
+            padding: 0;
+            h2{
+                font-size: 34px;
+                margin-bottom: 24px;
+            }
+            .details{
+                display: block;
+                text-align: center;
+                .paragraphs,
+                .image-container{
+                    width: 100%;
+
+                    p{
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
