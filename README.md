@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Honey Finance website
 
-Honey Labs. Prod
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`v.0.1.4`
+
+Updated: New README.md 
+
+This website was designed by Tom Pandolfi and Oshioked
 
 ## Available Scripts
 
