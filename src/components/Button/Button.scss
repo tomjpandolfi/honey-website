@@ -1,0 +1,17 @@
+@import '../../sass/variables.scss';
+
+.primary-button{
+  background: $gradient;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 25px;
+
+  p{
+    color: $body-background !important;
+  }
+
+  &:hover{
+    opacity: .9;
+  }
+}

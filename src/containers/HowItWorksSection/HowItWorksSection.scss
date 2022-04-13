@@ -1,51 +1,82 @@
-.how-it-works-section{
-    .container{
-        padding: 0 4%;
-        h2{
-           font-size: 48px; 
-           margin: 0;
-           margin-bottom: 30px;
-        }
-        .details{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: left;
-            .paragraphs{
-                width: 47%;
-                p{
-                    line-height: 38px;
-                    font-size: 20px;
-                }
+@import '../../sass/variables.scss';
 
+.how-it-works-section {
+    // min-height: 100vh;
+    padding-left: 5%;
+    margin-top: 100px;
+    position: relative;
+
+    .wave-triangle {
+        position: absolute;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        z-index: -1;
+        left: calc(5% - 20px);
+        bottom: -20px;
+        max-width: 350px;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        padding: 80px 0 80px 5%;
+        background-color: $primary-color;
+        border-radius: 15px 0px 0px 15px;
+        position: relative;
+
+        .star-image {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            transform: scale(0.7);
+        }
+
+        .details-container {
+            .title-text {
+                font-size: 40px;
+                line-height: 48px;
+                margin-bottom: 15px;
             }
-            .image-container{
-                width: 47%;
+
+            .body-text {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 15px;
             }
+        }
+
+        .image-with-Bg {
+            margin-left: 30px;
+            border-radius: 15px 0px 0px 15px;
+            overflow: hidden;  
         }
     }
 }
 
-@media only screen and (max-width: 768px){
-    .how-it-works-section{
-        .container{
-            padding: 0;
-            h2{
-                font-size: 34px;
-                margin-bottom: 24px;
-            }
-            .details{
-                display: block;
-                text-align: center;
-                .paragraphs,
-                .image-container{
-                    width: 100%;
+@media only screen and (max-width: 820px) {
+    .how-it-works-section {
+        text-align: center;
+        padding: 5%;
+        .wave-triangle {
 
-                    p{
-                        font-size: 18px;
-                        line-height: 30px;
-                    }
+        }
+        .content {
+            flex-direction: column;
+            padding: 5%;
+            border-radius: 10px;
+
+            .details-container {
+                .title-text {
+                    font-size: 30px;
                 }
+                .body-text {
+                    font-size: 15px;
+                }
+            }
+            .image-with-Bg {
+                margin-left: 0;
+                border-radius: 10px;
+                margin-top: 15px;
             }
         }
     }

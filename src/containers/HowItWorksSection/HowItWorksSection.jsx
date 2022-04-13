@@ -1,37 +1,45 @@
-import React from 'react';
+import BodyText from '../../components/BodyText/BodyText';
 import ImageWithLoadBg from '../../components/ImageWithLoadBg/ImageWithLoadBg';
-import SectionPadding from '../../components/SectionPadding/SectionPadding';
+import TitleText from '../../components/TitleText/TitleText';
 import './HowItWorksSection.scss';
+import WaveTriangle from '../../assets/images/waveTriangle.png';
+import StarImage from '../../assets/images/star.png';
 
-const HowItWorksSection = props =>{
+const detailsParagraphs = [
+    `
+        Honey brings lending and borrowing to NFTs, allowing you to
+        utilize capital stored away in your NFT collection.
+    `,
+    `
+        Lenders lock up liquidity in exchange for HONEY, which can
+        be staked for protocol fees.
+    `,
+    `
+        Borrowers stake NFT as collateral and pay interest, which is
+        distributed to HONEY holders
+    `
+]
+
+const HowItWorksSection = props => {
     return(
-        <div className = "how-it-works-section">
-            <SectionPadding>
-                <div className = "container">
-                    <h2>How it works</h2>
-                    <div className = "details">
-                        <div className = "paragraphs">
-                            <p>
-                                Honey brings lending and borrowing to NFTs, allowing you to utilize capital
-                                stored away in your NFT collection.
-                            </p>
-                            <p>
-                                Lenders lock up liquidity in exchange for $HONEY, which can be staked for protocol fees.
-                            </p>
-                            <p>
-                                Borrowers stake NFTs as collateral and pay interest, which is distributed to $HONEY holders and lenders.
-                            </p>
-                        </div>
-                        <div className = "image-container">
-                            <ImageWithLoadBg
-                                src = ''
-                                aspectRatio = {1.14}
-                                alt = ''
-                            />
-                        </div>
-                    </div>
+        <div className="how-it-works-section">
+            <img className='wave-triangle' src={WaveTriangle} alt="Wave triangle" />
+            <div className="content">
+                <img className='star-image' src={StarImage} alt="start" />
+                <div className="details-container">
+                    <TitleText>How it works</TitleText>
+                    {
+                        detailsParagraphs.map((paragraph, i) => (
+                            <BodyText key={i}>{paragraph}</BodyText>
+                        ))
+                    }
                 </div>
-            </SectionPadding>
+                <ImageWithLoadBg
+                    src={''}
+                    alt=""
+                    aspectRatio={2.5}
+                />
+            </div>
         </div>
     )
 }

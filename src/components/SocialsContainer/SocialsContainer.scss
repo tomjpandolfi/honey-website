@@ -1,0 +1,51 @@
+@import '../../sass//variables.scss';
+
+.socials-container{
+    display: flex;
+    justify-content: center;
+
+    &>a{
+        margin-left: 40px;
+        background-color: $body-background;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+
+        &:hover {
+            background: $gradient;
+
+            svg {
+                path {
+                    fill: $body-background;
+                }
+            }
+        }
+
+        svg {
+            width: 35px;
+        }
+
+        &:first-child{
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .socials-container{
+
+        &>a{
+            width: 44px;
+            height: 44px;
+            margin-left: 30px;
+            padding: 8px;
+
+            svg {
+                width: 100%;
+            }
+        }
+    }
+}

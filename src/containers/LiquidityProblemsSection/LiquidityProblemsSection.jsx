@@ -1,14 +1,17 @@
 import React from 'react';
 import LiquidityProblemCard from '../../components/LiquidityProblemCard/LiquidityProblemCard';
 import SectionPadding from '../../components/SectionPadding/SectionPadding';
-import './LiquidityProblemSection.scss';
+import TitleText from '../../components/TitleText/TitleText';
+import './LiquidityProblemsSection.scss';
 
-const LiquidityProblemSection = props =>{
+const LiquidityProblemsSection = props =>{
     return(
         <div className = "liquidity-problem-section">
             <SectionPadding>
                 <div className = "container">
-                    <h2>NFT liquidity solution</h2>
+                    <div className="head">
+                        <TitleText>NFT liquidity solution</TitleText>
+                    </div>
                     <div className = 'cards-container'>
                         <LiquidityProblemCard
                             title = "Opportunity cost"
@@ -42,4 +45,4 @@ const LiquidityProblemSection = props =>{
     )
 }
 
-export default LiquidityProblemSection;
+export default LiquidityProblemsSection;

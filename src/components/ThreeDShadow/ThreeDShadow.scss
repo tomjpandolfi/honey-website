@@ -1,0 +1,80 @@
+.three-d-shadow{
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0;
+
+    .skew-container{
+        z-index: -1;
+        height: 50%;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+
+        div{
+            position: absolute;
+            height: 130%;
+            width: 100%;
+        }
+    }
+
+    &[direction = 'right']{
+        left: calc(100% - 11px);
+
+        .skew-container{
+            div{
+                transform-origin: left;
+                background: linear-gradient(90deg, #383944 18.19%, rgba(60, 60, 60, 0) 101.82%);
+            }
+        }
+
+        .skew-top-container{
+            top: 0;
+            div{
+                transform: skewy(20deg);
+            }
+        }
+
+        .skew-bottom-container{
+            bottom: 0;
+            div{
+                transform: skewy(-20deg);
+                bottom: 0;
+            }
+        } 
+    }
+
+    &[direction = 'left']{
+        right: calc(100% - 11px);
+
+        .skew-container{
+            div{
+                transform-origin: right;
+                background: linear-gradient(270.44deg, #383944 0.41%, rgba(60, 60, 60, 0) 99.66%);
+            }
+        }
+
+        .skew-top-container{
+            bottom: 0;
+            div{
+                bottom: 0;
+                transform: skewy(20deg);
+            }
+        }
+
+        .skew-bottom-container{
+            top: 0;
+            div{
+                transform: skewy(-20deg);
+                top: 0;
+            }
+        } 
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+    .three-d-shadow{
+        display: none;
+    }
+}

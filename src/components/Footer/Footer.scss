@@ -1,0 +1,97 @@
+@import '../../sass/variables.scss';
+@import '../../sass/global.scss';
+
+.footer{
+    background-color: $primary-color;
+    margin-top: 120px;
+    padding: 80px 0 40px;
+    color: #FFE6CB;
+    text-align: left;
+
+    .row-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        grid-column-gap: 30px;
+        align-items: stretch;
+
+        .first-block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .title-text {
+                font-size: 23px;
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+            .buttons-container {
+
+                a{
+                    display: flex;
+                    margin-bottom: 20px;
+
+                    svg {
+                        margin-right: 20px;
+                    }
+
+                    &:hover {
+                        .body-text {
+                            @include gradient-text();
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }   
+
+        .card{
+            background: $body-background;
+            padding: 50px 40px;
+            border-radius: 10px;
+            text-align: center;
+
+            .body-text {
+                font-size: 15px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    hr{
+        margin: 60px 0 40px;
+        border: none;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.13);
+    }
+}
+
+@media only screen and (max-width: 920px){
+    .footer {
+        .row-container {
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 30px;
+            .first-block {
+                text-align: center;
+                margin: 0 auto;
+                grid-column-start: span 2;;
+                max-width: 450px;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .footer{
+        .row-container {
+            grid-template-columns: 1fr;
+            .first-block {
+                grid-column-start: span 1;
+
+                .card {
+                    width: 100%;
+                }
+            }            
+        }
+    }
+}

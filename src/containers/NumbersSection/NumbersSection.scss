@@ -1,0 +1,78 @@
+@import '../../sass/variables.scss';
+
+.numbers-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    margin: 0 5%;
+    padding: 100px 10%;
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    flex-wrap: wrap;
+
+    .wave-img-container {
+        position: absolute;
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        top: -105px;
+        left: -50px;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .stat-container {
+        text-align: center;
+        .title-text {
+            &:first-child {
+                font-size: 16px;
+                line-height: 18px;
+                color: rgba(256, 256, 256, .44);
+            }
+
+            &:last-child {
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px){
+    .numbers-section {
+        .stat-container {
+            .title-text {
+                &:first-child {
+                    font-size: 15px;
+                }
+                &:last-child {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .numbers-section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row-gap: 40px;
+
+        .wave-img-container {
+            top: -20px;
+
+            img {
+                width: 550px;
+            }
+        }
+        .stat-container {
+            width: 100%;
+        }
+    }
+}

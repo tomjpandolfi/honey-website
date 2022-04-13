@@ -3,9 +3,7 @@ import './SectionPadding.scss';
 
 const SectionPadding = props =>{
     return(
-        <div
-            className = 'section-padding'
-        >
+        <div className ={`section-padding ${props.className || ''}`}>
             {props.children}
         </div>
     )

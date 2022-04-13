@@ -1,10 +1,15 @@
 .liquidity-problem-section{
+    text-align: center;
+    margin-top: 150px;
     .container{
-        h2{
-            font-size: 48px; 
-            margin: 0;
-            margin-bottom: 30px;
+
+        .head {
+            .title-text {
+                margin-bottom: 50px;
+                font-size: 40px;
+            }            
         }
+
         .cards-container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -16,9 +21,12 @@
 @media only screen and (max-width: 768px){
     .liquidity-problem-section{
         .container{
-            h2{
-                font-size: 34px;
-                margin-bottom: 24px;
+            .head{
+                .title-text {
+                    font-size: 34px;
+                    line-height: 40px;
+                    margin-bottom: 24px;                    
+                }
             }
             .cards-container{
                 display: block;
